@@ -8,7 +8,8 @@ def main() -> None:
     nodo_objetivo = int(input("Nodo objetivo: "))
     # Imprimiendo todos los caminos posibles desde el nodo inicial hasta el nodo final
     print(f"Caminos posibles desde {nodo_inicial} hasta {nodo_objetivo}: ")
-    print(grafo.caminos(nodo_inicial, nodo_objetivo))
+    for camino in grafo.caminos(nodo_inicial, nodo_objetivo):
+        print(f"{camino} -> Costo = {len(camino)}")
 
 if __name__ == "__main__":
     main()
