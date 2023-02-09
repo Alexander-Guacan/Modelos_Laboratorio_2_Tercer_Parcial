@@ -31,8 +31,8 @@ class Grafo:
         Returns:
             tuple[list[list[int]], int]: _description_ Retorna los caminos y el numero de caminos
         """
-
-        if len(caminos[camino]) > 0 and nodo_actual == caminos[camino][0]:
+        # Si un no ya ha sido recorrido
+        if nodo_actual in caminos[camino]:
             return caminos, camino + 1
 
         # Agregamos el nodo que estamos accediendo al recorrido
